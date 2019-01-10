@@ -5,7 +5,7 @@ import SizeSelector from "./SizeSelector";
 
 class GiftProduct extends Component {
   state = {
-    productVo: {},
+    productVo: { displayName: "" },
     imgUrl: "",
     swatchImg: ""
   };
@@ -19,8 +19,8 @@ class GiftProduct extends Component {
     );
 
     this.setState({
-      //productVo: JSON.parse(values.data.product[0]),
-      productVo: values.data.product[0].giftcardDetails.maxVal,
+      //productVo: {JSON.parse(}values.data.product[0]},
+      productVo: { displayName: values.data.product[0].product_name },
       imgUrl:
         values.data.product[0].all_available_colors[0].values[0].sku_image,
       swatchImg:
@@ -36,7 +36,13 @@ class GiftProduct extends Component {
       </div>
     );
   }
-
+  renderProductName() {
+    return (
+      <div>
+        <h3>{this.state.productVo.displayName}</h3>
+      </div>
+    );
+  }
   renderColorSelection() {
     return (
       <div className="color-selector">
@@ -83,6 +89,7 @@ class GiftProduct extends Component {
   render() {
     return (
       <div className="product-display" data-text="">
+        {this.renderProductName()}
         {this.renderProductImage()}
         {this.renderColorSelection()}
         <SizeSelector />
