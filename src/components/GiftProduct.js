@@ -47,7 +47,7 @@ class GiftProduct extends Component {
         >
           <h3>COLORS</h3>
           <p className="mar-color-states">
-            <span className="mar-hover-color" />{" "}
+            <span className="mar-hover-color" />
             <span className="mar-selected-color">Grey</span>
           </p>
 
