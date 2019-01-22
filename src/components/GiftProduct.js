@@ -19,7 +19,7 @@ class GiftProduct extends Component {
         params: {
           pageId: "PDP_getProductSKU",
           Action: "PDP.getProduct",
-          id: "352973"
+          id: "352986"
         }
       }
     );
@@ -46,7 +46,7 @@ class GiftProduct extends Component {
         <img
           src={`${
             this.state.productVo.all_available_colors[0].values[0].sku_image
-          }?$pdpMainImage$&fit=constrain,1&wid=960&hei=1248`}
+          }?$pdpMainImage$&fit=constrain,1&wid=960&hei=500`}
         />
       </div>
     );
