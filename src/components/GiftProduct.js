@@ -19,14 +19,16 @@ class GiftProduct extends Component {
         params: {
           pageId: "PDP_getProductSKU",
           Action: "PDP.getProduct",
-          id: "352986"
+          id: "353932"
         }
       }
     );
 
-    this.setState({
-      productVo: values.data.product[0]
-    });
+    if (values != null && undefined != values) {
+      this.setState({
+        productVo: values.data.product[0]
+      });
+    }
   }
 
   renderProductName() {
@@ -69,6 +71,17 @@ class GiftProduct extends Component {
       />
     );
   }
+  renderSizeAndSizeGroup() {
+    return (
+      <div className="mar-product-size-container">
+        <SizeSelector
+          sizeGroups={this.state.productVo.all_available_size_groups}
+          sizes={this.state.productVo.all_available_sizes}
+          sizeChart={this.state.productVo.size_chart}
+        />
+      </div>
+    );
+  }
 
   render() {
     return (
@@ -76,7 +89,7 @@ class GiftProduct extends Component {
         {this.renderProductName()}
         {this.renderProductImage()}
         {this.renderColorSelections()}
-        <SizeSelector />
+        {this.renderSizeAndSizeGroup()}
       </div>
     );
   }

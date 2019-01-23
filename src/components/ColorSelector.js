@@ -4,12 +4,12 @@ class ColorSelector extends React.Component {
   state = { selectedColor: {} };
 
   componentDidMount() {
-    const a = this.props.colors.filter(color => {
+    const selectedColor = this.props.colors.filter(color => {
       return color.id === this.props.selectedColor;
     });
-    console.log(a);
+
     this.setState({
-      selectedColor: a
+      selectedColor: selectedColor
     });
   }
 
@@ -42,7 +42,7 @@ class ColorSelector extends React.Component {
 
   renderColorSwatches = color => {
     return (
-      <li className="cmn-radio-container">
+      <li className="cmn-radio-container" key={color.id}>
         <input
           className="visuallyhidden"
           type="radio"
@@ -52,7 +52,6 @@ class ColorSelector extends React.Component {
           data-option-value={color.name}
           data-option-key="color"
           aria-label={`color ${color.name}`}
-          checked="checked"
         />
         <label
           className="cmn-input-label cmn-radio-label"
