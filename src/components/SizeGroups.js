@@ -22,7 +22,7 @@ class SizeGroups extends Component {
 
 function SizeGroup(props) {
   if (!props.sizeGroups || !props.sizeGroups.values) {
-    console.log("emprytyty");
+    console.log("empty");
     return <div />;
   }
   const sizegroup = props.sizeGroups.values.map(value => {
