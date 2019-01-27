@@ -24,7 +24,7 @@ class GiftProduct extends Component {
       }
     );
 
-    if (values != null && undefined != values) {
+    if (values !== null && undefined !== values) {
       this.setState({
         productVo: values.data.product[0]
       });
@@ -49,6 +49,7 @@ class GiftProduct extends Component {
           src={`${
             this.state.productVo.all_available_colors[0].values[0].sku_image
           }?$pdpMainImage$&fit=constrain,1&wid=960&hei=500`}
+          alt="productImage"
         />
       </div>
     );
