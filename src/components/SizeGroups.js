@@ -8,7 +8,11 @@ class SizeGroups extends Component {
 
   render() {
     if (!this.props.sizeGroups) {
-      return <div>Loading...</div>;
+      return (
+        <div>
+          <br />
+        </div>
+      );
     }
     return (
       <div>

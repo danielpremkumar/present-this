@@ -3,9 +3,22 @@ import React, { Component } from "react";
 
 const SizeChartLink = props => {
   return (
-    <a href="#" title={props.sizeChart} className="asc-groupe-size-guide">
-      Size Guide
-    </a>
+    <div className="sizeChart">
+      <a href="#" title={props.sizeChart} className="asc-groupe-size-guide">
+        Size Guide
+      </a>
+
+      <p />
+      <p />
+      <p />
+      <p />
+      <p />
+      <p />
+      <p />
+      <p />
+      <p />
+      <p />
+    </div>
   );
 };
 

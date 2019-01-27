@@ -25,7 +25,7 @@ class ColorSelector extends React.Component {
           <p className="mar-color-states">
             <span className="mar-hover-color" />
             <span className="mar-selected-color">
-              {this.props.selectedColor}
+              {this.props.colors[0].name}
             </span>
           </p>
 
