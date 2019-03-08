@@ -8,7 +8,7 @@ const SizeSelector = props => {
     <div className="mar-product-size-container">
       <SizeGroups sizeGroups={props.sizeGroups} />
       <SizeChartLink sizeChart={props.sizeChart} />
-      <div className="asc-product-size-container size-group-info--tab-item asc-239120-REGULAR tab-active">
+      <div className="asc-product-size-container size-group-info--tab-item tab-active">
         <ul className="mar-product-sizes nav mar-option-container">
           <SizeDisplay sizes={props.sizes} />
         </ul>

@@ -14,12 +14,12 @@ class GiftProduct extends Component {
 
   async fetchProductInfo() {
     const values = await axios.get(
-      "https://lanebryant.com/lanebryant/baseAjaxServlet",
+      "https://uit5.lanebryant.com/lanebryant/baseAjaxServlet",
       {
         params: {
           pageId: "PDP_getProductSKU",
           Action: "PDP.getProduct",
-          id: "353932"
+          id: "230415"
         }
       }
     );
@@ -41,6 +41,7 @@ class GiftProduct extends Component {
 
   renderProductImage() {
     if (!this.state.productVo.all_available_colors) {
+      console.log("no image");
       return null;
     }
     return (
